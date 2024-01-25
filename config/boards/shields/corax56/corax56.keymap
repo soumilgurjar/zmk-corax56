@@ -94,7 +94,7 @@
             label = "tap_dance_cmd_tab";
             #binding-cells = <0>;
             tapping-term-ms = <TAP_DANCE_TAPPING_TERM>;
-            bindings = <&kt LG(TAB)>, <&cmd_tab_tab>;
+            bindings = <&kp LG(TAB)>, <&cmd_tab_tab>;
         };
 
         // Tap-dance to quickly switch between last and second-to-last used applications on windows
@@ -103,7 +103,7 @@
             label = "tap_dance_alt_tab";
             #binding-cells = <0>;
             tapping-term-ms = <TAP_DANCE_TAPPING_TERM>;
-            bindings = <&kt LA(TAB)>, <&alt_tab_tab>;
+            bindings = <&kp LA(TAB)>, <&alt_tab_tab>;
         };
 
     };
@@ -154,7 +154,7 @@
             key-positions = <39 40>;
             layers = <DEF_MAC>;
 			slow-release;
-            bindings = <&kt LG(TAB)>;
+            bindings = <&kp LG(TAB)>;
         };
 
         // Simultaneous X+C : Switch to previous window of current app on mac
@@ -163,7 +163,7 @@
             key-positions = <38 39>;
             layers = <DEF_MAC>;
 			slow-release;
-            bindings = <&kt LG(GRAVE)>;
+            bindings = <&kp LG(GRAVE)>;
         };
 
         // Simultaneous W+E : Type (
