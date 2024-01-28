@@ -19,6 +19,7 @@
 #define HYP LC(LA(LS(LGUI)))
 #define MEH LC(LA(LSHFT))
 #define COMBO_TIMEOUT 25
+#define COMBO_PRIOR_IDLE 100
 #define TAP_DANCE_TAPPING_TERM 250
 
 // Caps word will continue to remain active after these keys
@@ -151,6 +152,7 @@
         // Simultaneous C+V : Switch to previous app on mac
         combo_previous_app_mac {
             timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <39 40>;
             layers = <DEF_MAC>;
 			slow-release;
@@ -160,6 +162,7 @@
         // Simultaneous X+C : Switch to previous window of current app on mac
         combo_previous_window_mac {
             timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <38 39>;
             layers = <DEF_MAC>;
 			slow-release;
@@ -169,6 +172,7 @@
         // Simultaneous W+E : Type (
         combo_left_parenthesis {
             timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <12 13>;
             layers = <DEF_MAC DEF_WIN>;
 			slow-release;
@@ -178,6 +182,7 @@
         // Simultaneous E+R : Type )
         combo_right_parenthesis {
             timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <13 14>;
             layers = <DEF_MAC DEF_WIN>;
 			slow-release;
@@ -187,6 +192,7 @@
         // Simultaneous U+I : Type {
         combo_left_brace {
             timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <17 18>;
             layers = <DEF_MAC DEF_WIN>;
 			slow-release;
@@ -196,6 +202,7 @@
         // Simultaneous I+O : Type }
         combo_right_brace {
             timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <18 19>;
             layers = <DEF_MAC DEF_WIN>;
 			slow-release;
@@ -205,6 +212,7 @@
         // Simultaneous m+, : Type [
         combo_left_bracket {
             timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <45 46>;
             layers = <DEF_MAC DEF_WIN>;
 			slow-release;
@@ -214,6 +222,7 @@
         // Simultaneous ,+. : Type ]
         combo_right_bracket {
             timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <46 47>;
             layers = <DEF_MAC DEF_WIN>;
 			slow-release;
