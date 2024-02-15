@@ -9,11 +9,12 @@
 #define NUM     2
 #define SYM     3
 #define GAM     4
-#define DEF_WIN 5
-#define NAV_WIN 6
-#define NUM_WIN 7
-#define SYM_WIN 8
-#define GAM_WIN 9
+#define SUDOKU  5
+#define DEF_WIN 6
+#define NAV_WIN 7
+#define NUM_WIN 8
+#define SYM_WIN 9
+#define GAM_WIN 10
 
 // Timing constants and Hyper/Meh keys
 #define HYP LC(LA(LS(LGUI)))
@@ -120,13 +121,13 @@
             bindings = <&switch_to_mac>, <&switch_to_win>;
         };
 
-        // Tap-dance allowing easy switch between mac default layer and gaming layer
+        // Tap-dance allowing easy switch between mac default layer, gaming and sudoku layer
         td_mac_gaming: tap_dance_mac_gaming {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_mac_gaming";
             #binding-cells = <0>;
             tapping-term-ms = <TAP_DANCE_TAPPING_TERM>;
-            bindings = <&to DEF_MAC>, <&to GAM>;
+            bindings = <&to DEF_MAC>, <&to GAM>, <&to SUDOKU>;
         };
 
         // Tap-dance allowing easy switch between windows default layer and gaming layer
@@ -407,6 +408,30 @@
   &kp GRAVE   &kp LSHFT   &kp A    &kp S    &kp D            &kp F          &kp G                                      &kp H          &kp J     &kp K       &kp L     &kp SEMI   &kp SQT     &kp EQUAL
               &kp LCTRL   &kp Z    &kp X    &kp C            &kp V          &kp B          &kp RET     &none           &kp N          &kp M     &kp COMMA   &kp DOT   &kp FSLH   &kp BSLH             
                                             &td_mac_gaming   &hm LALT ESC   &hm LGUI RET   &kp SPACE   &trl NUM BSPC   &trl SYM RET   &kp DEL   &none                                                 
+			>;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
+		};
+
+		mac_sudoku_layer {
+            label = "SUDOKU";
+			bindings = <
+//                          ┌─────────────────┬────────┬────────────────┬──────────────┬─────────────┐                               ┌──────────────┬──────────┬────────┬───────────┬───────┐                
+//                          │      &none      │ &none  │     &kp N0     │    &none     │  &kp LG(A)  │                               │    &none     │  &none   │ &none  │   &none   │ &none │                
+//            ┌─────────────┼─────────────────┼────────┼────────────────┼──────────────┼─────────────┤                               ├──────────────┼──────────┼────────┼───────────┼───────┼───────┐        
+//            │   &kp TAB   │    &kp LG(I)    │ &kp N7 │     &kp N8     │    &kp N9    │  &kp LG(Z)  │                               │    &none     │  &none   │ &none  │   &none   │ &none │ &none │        
+//    ┌───────┼─────────────┼─────────────────┼────────┼────────────────┼──────────────┼─────────────┤                               ├──────────────┼──────────┼────────┼───────────┼───────┼───────┼───────┐
+//    │ &none │ &td_cmd_tab │   &hm LCTRL C   │ &kp N4 │     &kp N5     │ &hm LGUI N6  │  &kp BSPC   │                               │   &kp LEFT   │ &kp DOWN │ &kp UP │ &kp RIGHT │ &none │ &none │ &none │
+//    └───────┼─────────────┼─────────────────┼────────┼────────────────┼──────────────┼─────────────┼────────────┬──────────────────┼──────────────┼──────────┼────────┼───────────┼───────┼───────┼───────┘
+//            │ &key_repeat │ &hm LG(LSHFT) V │ &kp N1 │     &kp N2     │    &kp N3    │    &kp S    │ &kp C_MUTE │ &kp C_PLAY_PAUSE │    &none     │  &none   │ &none  │   &none   │ &none │ &none │        
+//            └─────────────┴─────────────────┴────────┼────────────────┼──────────────┼─────────────┼────────────┼──────────────────┼──────────────┼──────────┼────────┼───────────┴───────┴───────┘        
+//                                                     │ &td_mac_gaming │ &hm LALT ESC │ &hm LSHFT X │ &hm LGUI Z │  &trl NUM BSPC   │ &trl SYM RET │ &kp DEL  │ &none  │                                    
+//                                                     └────────────────┴──────────────┴─────────────┴────────────┴──────────────────┴──────────────┴──────────┴────────┘                                    
+                        &none             &none    &kp N0           &none          &kp LG(A)                                     &none          &none      &none    &none       &none                
+          &kp TAB       &kp LG(I)         &kp N7   &kp N8           &kp N9         &kp LG(Z)                                     &none          &none      &none    &none       &none   &none        
+  &none   &td_cmd_tab   &hm LCTRL C       &kp N4   &kp N5           &hm LGUI N6    &kp BSPC                                      &kp LEFT       &kp DOWN   &kp UP   &kp RIGHT   &none   &none   &none
+          &key_repeat   &hm LG(LSHFT) V   &kp N1   &kp N2           &kp N3         &kp S         &kp C_MUTE   &kp C_PLAY_PAUSE   &none          &none      &none    &none       &none   &none        
+                                                   &td_mac_gaming   &hm LALT ESC   &hm LSHFT X   &hm LGUI Z   &trl NUM BSPC      &trl SYM RET   &kp DEL    &none                                     
 			>;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
