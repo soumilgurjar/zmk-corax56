@@ -392,22 +392,22 @@
 		mac_gaming_layer {
             label = "GAM";
 			bindings = <
-//               ┌───┬───┬────────────────┬──────────────┬──────────────┐                     ┌──────────────┬─────┬─────┬───┬───┐        
-//               │ 1 │ 2 │       3        │      4       │      5       │                     │      6       │  7  │  8  │ 9 │ 0 │        
-//        ┌──────┼───┼───┼────────────────┼──────────────┼──────────────┤                     ├──────────────┼─────┼─────┼───┼───┼───┐    
-//        │ tab  │ Q │ W │       E        │      R       │      T       │                     │      Y       │  U  │  I  │ O │ P │ - │    
-//    ┌───┼──────┼───┼───┼────────────────┼──────────────┼──────────────┤                     ├──────────────┼─────┼─────┼───┼───┼───┼───┐
-//    │ ` │ lsft │ A │ S │       D        │      F       │      G       │                     │      H       │  J  │  K  │ L │ ; │ ' │ = │
-//    └───┼──────┼───┼───┼────────────────┼──────────────┼──────────────┼─────┬───────────────┼──────────────┼─────┼─────┼───┼───┼───┼───┘
-//        │ lctl │ Z │ X │       C        │      V       │      B       │ ent │               │      N       │  M  │  ,  │ . │ / │ \ │    
-//        └──────┴───┴───┼────────────────┼──────────────┼──────────────┼─────┼───────────────┼──────────────┼─────┼─────┼───┴───┴───┘    
-//                       │ &td_mac_gaming │ &hm lalt esc │ &hm lgui ent │ spc │ &trl NUM bspc │ &trl SYM ent │ del │     │                
-//                       └────────────────┴──────────────┴──────────────┴─────┴───────────────┴──────────────┴─────┴─────┘                
-                          &kp N1   &kp N2   &kp N3           &kp N4         &kp N5                                     &kp N6         &kp N7    &kp N8      &kp N9    &kp N0                          
-              &kp TAB     &kp Q    &kp W    &kp E            &kp R          &kp T                                      &kp Y          &kp U     &kp I       &kp O     &kp P      &kp MINUS            
-  &kp GRAVE   &kp LSHFT   &kp A    &kp S    &kp D            &kp F          &kp G                                      &kp H          &kp J     &kp K       &kp L     &kp SEMI   &kp SQT     &kp EQUAL
-              &kp LCTRL   &kp Z    &kp X    &kp C            &kp V          &kp B          &kp RET     &none           &kp N          &kp M     &kp COMMA   &kp DOT   &kp FSLH   &kp BSLH             
-                                            &td_mac_gaming   &hm LALT ESC   &hm LGUI RET   &kp SPACE   &trl NUM BSPC   &trl SYM RET   &kp DEL   &none                                                 
+//               ┌───┬───┬────────────────┬──────────────┬──────────────┐                              ┌──────────────┬─────┬─────┬───┬───┐        
+//               │ 1 │ 2 │       3        │      4       │      5       │                              │      6       │  7  │  8  │ 9 │ 0 │        
+//        ┌──────┼───┼───┼────────────────┼──────────────┼──────────────┤                              ├──────────────┼─────┼─────┼───┼───┼───┐    
+//        │ tab  │ Q │ W │       E        │      R       │      T       │                              │      Y       │  U  │  I  │ O │ P │ - │    
+//    ┌───┼──────┼───┼───┼────────────────┼──────────────┼──────────────┤                              ├──────────────┼─────┼─────┼───┼───┼───┼───┐
+//    │ ` │ lsft │ A │ S │       D        │      F       │      G       │                              │      H       │  J  │  K  │ L │ ; │ ' │ = │
+//    └───┼──────┼───┼───┼────────────────┼──────────────┼──────────────┼──────────────┬───────────────┼──────────────┼─────┼─────┼───┼───┼───┼───┘
+//        │ lctl │ Z │ X │       C        │      V       │      B       │     ent      │               │      N       │  M  │  ,  │ . │ / │ \ │    
+//        └──────┴───┴───┼────────────────┼──────────────┼──────────────┼──────────────┼───────────────┼──────────────┼─────┼─────┼───┴───┴───┘    
+//                       │ &td_mac_gaming │ &hm lalt esc │ &hm lgui ent │ &hm lsft spc │ &trl NUM bspc │ &trl SYM ent │ del │     │                
+//                       └────────────────┴──────────────┴──────────────┴──────────────┴───────────────┴──────────────┴─────┴─────┘                
+                          &kp N1   &kp N2   &kp N3           &kp N4         &kp N5                                           &kp N6         &kp N7    &kp N8      &kp N9    &kp N0                          
+              &kp TAB     &kp Q    &kp W    &kp E            &kp R          &kp T                                            &kp Y          &kp U     &kp I       &kp O     &kp P      &kp MINUS            
+  &kp GRAVE   &kp LSHFT   &kp A    &kp S    &kp D            &kp F          &kp G                                            &kp H          &kp J     &kp K       &kp L     &kp SEMI   &kp SQT     &kp EQUAL
+              &kp LCTRL   &kp Z    &kp X    &kp C            &kp V          &kp B          &kp RET           &none           &kp N          &kp M     &kp COMMA   &kp DOT   &kp FSLH   &kp BSLH             
+                                            &td_mac_gaming   &hm LALT ESC   &hm LGUI RET   &hm LSHFT SPACE   &trl NUM BSPC   &trl SYM RET   &kp DEL   &none                                                 
 			>;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
