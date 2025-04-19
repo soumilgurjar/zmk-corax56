@@ -236,6 +236,26 @@
             bindings = <&kp LG(GRAVE)>;
         };
 
+        // Simultaneous C+V : Switch to previous app on win
+        combo_previous_app_win {
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <39 40>;
+            layers = <DEF_WIN>;
+			slow-release;
+            bindings = <&kp LA(TAB)>;
+        };
+
+        // Simultaneous X+C : Switch to previous window of current app on win
+        combo_previous_window_win {
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <38 39>;
+            layers = <DEF_WIN>;
+			slow-release;
+            bindings = <&kp LA(GRAVE)>;
+        };
+
         // Simultaneous W+E : Type (
         combo_left_parenthesis {
             timeout-ms = <COMBO_TIMEOUT>;
