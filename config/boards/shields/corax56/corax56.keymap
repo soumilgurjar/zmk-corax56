@@ -253,7 +253,7 @@
         // Simultaneous D+K : Turn on caps_word
         combo_caps_word {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <12 17>;
+            key-positions = <26 31>;
             layers = <DEF_MAC DEF_WIN>;
 			slow-release;
             bindings = <&caps_word>;
@@ -262,7 +262,7 @@
         // Simultaneous D+F+J+K : Toggle Caps Lock
         combo_caps_lock {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <12 13 16 17>;
+            key-positions = <26 27 30 31>;
             layers = <DEF_MAC DEF_WIN>;
 			slow-release;
             bindings = <&kp CAPS>;
